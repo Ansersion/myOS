@@ -1,0 +1,9 @@
+--cpu Cortex-M3
+".\obj\startup_stm32f10x_hd.o"
+".\obj\main.o"
+".\obj\myos.o"
+".\obj\os_cpu_a.o"
+--strict --scatter ".\obj\myos.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\obj\myos.map" -o .\obj\myos.axf
